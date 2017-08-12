@@ -1,0 +1,16 @@
+@import '../../theme/sass/auth';
+
+
+.socibutton {
+    background-image: url($assets-root + $images-root + 'google/btn_google_signin_dark_normal_web.png');
+    width: 191px;
+    height: 46px;
+    border: none;
+}
+
+.socibutton:hover {
+    background-image: url($assets-root + $images-root + 'google/btn_google_signin_dark_focus_web.png');
+    width: 191px;
+    height: 46px;
+    border: none;
+}
