@@ -21,6 +21,7 @@ export const routes: Routes = [
     path: 'pages',
     component: Pages,
     children: [
+       { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
       { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule', canActivate: [AuthGuard] },
     ],
   },

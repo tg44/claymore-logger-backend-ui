@@ -1,13 +1,15 @@
-import { NgModule }      from '@angular/core';
-import { CommonModule }  from '@angular/common';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgaModule } from '../../theme/nga.module';
 
-import { routing }       from './charts.routing';
+import { routing } from './charts.routing';
 import { Charts } from './charts.component';
 import { ChartistJs } from './components/chartistJs/chartistJs.component';
 import { ChartistJsService } from './components/chartistJs/chartistJs.service';
 import { AppTranslationModule } from '../../app.translation.module';
+import { Metrics } from 'app/pages/charts/metrics/metrics.component';
+import { MetricsService } from 'app/pages/charts/metrics/metrics.service';
 
 @NgModule({
   imports: [
@@ -15,14 +17,16 @@ import { AppTranslationModule } from '../../app.translation.module';
     AppTranslationModule,
     FormsModule,
     NgaModule,
-    routing
+    routing,
   ],
   declarations: [
     Charts,
-    ChartistJs
+    ChartistJs,
+    Metrics,
   ],
   providers: [
-    ChartistJsService
-  ]
+    ChartistJsService,
+    MetricsService,
+  ],
 })
 export class ChartsModule {}
